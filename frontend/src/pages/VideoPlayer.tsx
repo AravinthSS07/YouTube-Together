@@ -18,7 +18,7 @@ interface YouTubePlayer extends YT.Player {
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
 }
 
-const socket: Socket = io('http://localhost:4000'); // Connect to the WebSocket server
+const socket: Socket = io('https://youtubetogether.azurewebsites.net/'); // Connect to the WebSocket server
 
 function VideoPlayer() {
   const [player, setPlayer] = useState<YouTubePlayer | null>(null);
